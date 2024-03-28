@@ -7,5 +7,5 @@ export default defineConfig({
   build: {
     outDir: "./docs",
   },
-  base: "/telegram-mini-app-carrymate",
+  base: "/telegram-mini-app-numberspuzzle",
 });
