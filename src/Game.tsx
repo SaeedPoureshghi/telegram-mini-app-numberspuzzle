@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import PuzzleItems from "./components/PuzzleItems";
-import { chunkArray, getDimention } from "./utils";
+import { chunkArray, getDimention, shuffleArray } from "./utils";
 
 import WebApp from '@twa-dev/sdk';
 
@@ -39,8 +39,7 @@ const Game: React.FC = () => {
   };
 
   const StartGame = () => {
-    // const shuffledArray = shuffleArray(challenge);
-    const shuffledArray = [1, 2, 3, 4, 5, 6, 7, 0, 8]
+    const shuffledArray = shuffleArray(challenge);
     setChallenge(shuffledArray);
     setRows(chunkArray(shuffledArray, Board_Dimension));
     setMoves(0);

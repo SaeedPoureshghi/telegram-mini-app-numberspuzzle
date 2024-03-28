@@ -1,5 +1,5 @@
 import React from "react";
-import { TonConnectButton } from "@tonconnect/ui-react";
+// import { TonConnectButton } from "@tonconnect/ui-react";
 import logo from '../assets/logo.png';
 const Header: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Header: React.FC = () => {
         <h3>Numbers Puzzle</h3>
     </div>
       <div style={{ display: "flex", alignItems: "flex-end" }}>
-        <TonConnectButton />
+        {/* <TonConnectButton /> */}
       </div>
     </div>
   );
