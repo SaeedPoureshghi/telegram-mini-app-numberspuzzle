@@ -12,7 +12,7 @@ WebApp.expand();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <TonConnectUIProvider manifestUrl="https://saeedpoureshghi.github.io/telegram-mini-app-carrymate/tonconnect-manifest.json">
+    <TonConnectUIProvider manifestUrl="https://saeedpoureshghi.github.io/telegram-mini-app-numberspuzzle/tonconnect-manifest.json">
       <App />
     </TonConnectUIProvider>
   </React.StrictMode>,
