@@ -4,6 +4,7 @@ import PuzzleItems from "./components/PuzzleItems";
 import { chunkArray, getDimention, shuffleArray } from "./utils";
 
 import WebApp from '@twa-dev/sdk';
+import { TonConnectButton, useTonAddress } from "@tonconnect/ui-react";
 
 const Game: React.FC = () => {
   const Board: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 0];
@@ -14,6 +15,8 @@ const Game: React.FC = () => {
   );
   const [moves, setMoves] = React.useState(0);
   const [isGameStarted, setIsGameStarted] = React.useState(false);
+
+  const address = useTonAddress();
 
   const onItemClick: React.MouseEventHandler<HTMLDivElement> = (event) => {
     if (!isGameStarted) {
@@ -82,9 +85,23 @@ const Game: React.FC = () => {
         ))}
       </div>
       {!isGameStarted && (
+        <>
+        <div>
+          <h3>Rules:</h3>
+          <p>Click on a tile to move it to the empty space</p>
+        </div>
+        {address && 
         <button className="shuffle-button" onClick={() => StartGame()}>
           START GAME
         </button>
+        }
+        {!address &&
+        <>
+        <p><b>Connect Wallet to start</b></p>
+        <TonConnectButton />
+        </>
+        }
+        </>
       )}
     </div>
   );
