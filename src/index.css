@@ -57,9 +57,9 @@
 }
 
 .shuffle-button {
-  display: flex;
+  display: flex!important;
   width: 100%;
-  justify-content: center;
+  justify-content: center!important;
 }
 .shuffle-button:hover {
   transform: scale(1.02);
