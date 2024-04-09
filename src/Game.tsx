@@ -3,7 +3,7 @@ import React from "react";
 import PuzzleItems from "./components/PuzzleItems";
 import { chunkArray, getDimention, shuffleArray } from "./utils";
 
-import WebApp from '@twa-dev/sdk';
+import WebApp from "@twa-dev/sdk";
 import { TonConnectButton, useTonAddress } from "@tonconnect/ui-react";
 
 const Game: React.FC = () => {
@@ -57,16 +57,11 @@ const Game: React.FC = () => {
         WebApp.showAlert("You Won!");
         setMoves(0);
         setIsGameStarted(false);
-
       }
     }
     return () => {};
-// eslint-disable-next-line react-hooks/exhaustive-deps
-}, [challenge, isGameStarted]);
-    
-
-
-  
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [challenge, isGameStarted]);
 
   return (
     <div className="game">
@@ -86,21 +81,28 @@ const Game: React.FC = () => {
       </div>
       {!isGameStarted && (
         <>
-        <div>
-          <h3>Rules:</h3>
-          <p>Click on a tile to move it to the empty space</p>
-        </div>
-        {address && 
-        <button className="shuffle-button" onClick={() => StartGame()}>
-          START GAME
-        </button>
-        }
-        {!address &&
-        <>
-        <p><b>Connect Wallet to start</b></p>
-        <TonConnectButton />
-        </>
-        }
+          <div>
+            <h3>Rules:</h3>
+            <p>Click on a tile to move it to the empty space</p>
+          </div>
+
+          <div
+            style={{ display: "flex", gap: "10px", flexDirection: "column" }}
+          >
+            <div style={{ display: "flex" }}>
+              <TonConnectButton />
+            </div>
+            {address && (
+              <div style={{ display: "flex", flex: 1 }}>
+                <button
+                  className="go3974562317 go3032365164 shuffle-button"
+                  onClick={() => StartGame()}
+                >
+                  <div className="go1487791704">Start Game</div>
+                </button>
+              </div>
+            )}
+          </div>
         </>
       )}
     </div>

@@ -57,20 +57,20 @@
 }
 
 .shuffle-button {
-  padding: 1rem;
-  margin: 1rem;
-  border-radius: 0.5rem;
-  background-color: purple;
-  color: white;
-  font-size: 1rem;
-  font-weight: 700;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 .shuffle-button:hover {
-  background-color: #4b0082;
+  transform: scale(1.02);
   cursor: pointer;
 }
 
+.startgame_text {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 590;
+}
 .unselectable {
   -webkit-user-select: none; /* Safari 3.1+ */
   -moz-user-select: none; /* Firefox 2+ */
